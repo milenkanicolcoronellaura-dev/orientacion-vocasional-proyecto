@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Test - Habilidades y Aptitudes</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="yupi">
+
+    <header class="encabezado">
+      <span class="etiqueta">TEST DE ORIENTACIÓN VOCACIONAL </span>
+      <h1>Descubre tus habilidades y aptitudes</h1>
+      <p>
+        80 preguntas para conocer tus fortalezas y explorar
+        carreras del departamento de La Paz.
+      </p>
+    </header>
+
+    <!-- PANTALLA DE BIENVENIDA -->
+    <section id="inicio" class="panel">
+      <h2>Antes de comenzar</h2>
+
+      <p>
+        Este cuestionario te ayudará a reflexionar sobre las
+        actividades que consideras que puedes realizar con
+        mayor facilidad.
+      </p>
+
+      <ol class="pasos">
+        <li>Lee cada afirmación con atención.</li>
+        <li>Indica qué tan fácil te resulta realizar la actividad.</li>
+        <li>Responde según tu propia experiencia.</li>
+        <li>Puedes regresar para cambiar tus respuestas.</li>
+      </ol>
+
+      <div class="nota">
+        No hay respuestas buenas ni malas.
+        Las habilidades pueden desarrollarse con la práctica.
+      </div>
+
+      <button id="comenzar" class="boton">
+        Comenzar test →
+      </button>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section id="cuestionario" class="panel oculto">
+
+      <div class="arriba">
+        <h2 id="numero">Pregunta 1</h2>
+        <span id="contador" class="contador">1 de 80</span>
+      </div>
+
+      <div class="barra">
+        <div id="relleno" class="relleno"></div>
+      </div>
+
+      <p id="textoPregunta" class="pregunta"></p>
+
+      <div id="opciones"></div>
+
+      <p id="error" class="error" role="alert"></p>
+
+      <div class="acciones">
+        <button id="anterior" class="boton sec">
+          ← Anterior
+        </button>
+
+        <button id="siguiente" class="boton">
+          Siguiente pregunta →
+        </button>
+      </div>
+
+    </section>
+
+    <!-- RESULTADOS -->
+    <section id="resultados" class="panel oculto">
+
+      <h2>Tu perfil de habilidades</h2>
+
+      <p>
+        Conoce las áreas en las que percibes mayor facilidad
+        y descubre opciones profesionales relacionadas.
+      </p>
+
+      <div id="top"></div>
+
+      <h2 class="subtitulo">Resultados por área</h2>
+      <div id="grafico"></div>
+
+      <h2 class="subtitulo">
+        Carreras para explorar en La Paz
+      </h2>
+
+      <p>
+        Estas recomendaciones consideran varias habilidades.
+        La disponibilidad de cada carrera depende de la
+        universidad, sede y oferta académica vigente.
+      </p>
+
+      <div id="carreras"></div>
+
+      <p class="aviso">
+        Este cuestionario recoge la percepción personal de
+        habilidades. Sus resultados son orientativos y no
+        sustituyen una evaluación profesional.
+      </p>
+
+      <div class="acciones">
+        <button id="reiniciar" class="boton sec">
+          Repetir test
+        </button>
+
+        <button id="imprimir" class="boton">
+          Imprimir resultados
+        </button>
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>

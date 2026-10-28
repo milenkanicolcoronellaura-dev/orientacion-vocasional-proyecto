@@ -1,0 +1,2497 @@
+/* CONFIGURACIÓN GENERAL*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+:root {
+
+    --rojo-principal: #f0530a;
+
+    --rojo-oscuro: #651d2a;
+
+    --rojo-fondo: #700909;
+
+    --blanco: #ffffff;
+
+    --texto-oscuro: #222222;
+
+    --texto-medio: #333333;
+
+    --verde-publica: #fc7507;
+
+    --rojo-etiqueta: #fa4008;
+
+}
+/* CUERPO DE LA PÁGINA*/
+
+body {
+
+    background-color: #700909;
+
+    color: var(--texto-oscuro);
+
+    line-height: 1.7;
+
+    min-height: 100vh
+}
+/* CONTENEDOR*/
+
+.contenedor {
+
+
+
+display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;       
+
+
+    flex: 1 1 300px; 
+    min-height: min-content;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 0 1.5rem;
+
+}
+/*ENCABEZADO */
+
+.cabecera-principal {
+
+    position: relative;
+    text-align: center;
+    color: var(--blanco);
+    margin-bottom: 0;
+
+}
+
+/* Imagen superior */
+.imagen-superior {
+
+    width: 100%;
+
+    height: 220px;
+
+    background-image: url("imagen/s.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+    position: relative;
+
+}
+
+
+/* Capa roja sobre la imagen */
+
+.imagen-superior::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(80, 0, 0, 0.75);
+
+}
+
+
+/* Texto del encabezado */
+
+.texto-cabecera {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    width: 90%;
+
+
+
+}
+
+
+.texto-cabecera h1 {
+
+    font-size: 2.2rem;
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+.texto-cabecera p {
+
+    font-size: 1.15rem;
+
+    opacity: 0.95;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MENÚ DE NAVEGACIÓN */
+
+.menu-navegacion {
+
+    background-color: var(--blanco);
+
+    border-bottom: 1px solid #222;
+
+    padding: 0.8rem 0;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+.menu-navegacion ul {
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 2rem;
+
+}
+
+
+
+.menu-navegacion a {
+
+    text-decoration: none;
+
+    color: var(--texto-medio);
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;  
+    margin: 0;   
+
+}
+
+.menu-navegacion .contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.menu-navegacion a:hover {
+
+    color: var(--rojo-principal);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido-principal {
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    margin: 2rem auto;
+
+    padding: 2rem 1.5rem;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.imagen-superior {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.imagen-superior img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imagen-inicio {
+    width: 100%;
+    margin: 25px 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.imagen-inicio img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* SECCIONES*/
+
+.seccion-activa {
+
+    display: block;
+
+    background-color: rgba(255, 255, 255, 0.92);
+
+}
+
+
+.seccion-oculta {
+
+    display: none;
+
+}
+
+
+
+   /*TÍTULOS*/
+
+h2 {
+
+    font-size: 1.8rem;
+
+    color: var(--rojo-oscuro);
+
+    margin-bottom: 1rem;
+
+    padding-bottom: 0.5rem;
+
+    border-bottom: 2px solid #c7b27b;
+
+}
+
+
+.descripcion {
+
+    font-size: 1.05rem;
+
+    color: var(--texto-medio);
+
+    margin-bottom: 2rem;
+}
+
+/*CUADRO DE INFORMACIÓN*/
+.cuadro-info {
+
+    background-color: #faf8f0;
+    border-radius: 10px;
+    padding: 1.8rem;
+    margin-top: 30px;
+    border-left: 5px solid var(--rojo-principal);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cuadro-info h3 {
+    color: var(--rojo-oscuro);
+    font-size: 21px;
+    background-color: #eee9d9;
+    padding: 12px 15px;
+    border-left: 5px solid #8b303d;
+    border-radius: 6px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.cuadro-info h3:first-child {
+
+    margin-top: 0;
+
+}
+
+
+.cuadro-info h4 {
+
+    color: #7b2938;
+
+    font-size: 18px;
+
+    margin-top: 18px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.cuadro-info p {
+
+    color: var(--texto-medio);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+
+}
+
+
+.mensaje-final {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background-color: #eee9d9;
+
+    border-radius: 8px;
+
+    color: var(--rojo-oscuro) !important;
+
+}
+
+
+/*UNIVERSIDADES */
+
+.universidades {
+
+    margin-top: 40px;
+}
+
+.universidad {
+
+    background-color: var(--blanco);
+
+    border-left: 5px solid var(--rojo-principal);
+
+    border-radius: 8px;
+
+    padding: 1.5rem;
+
+    margin-bottom: 1.5rem;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+/*text uni principio*/
+.claro {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background-color: #eee9d9;
+
+    border-radius: 8px;
+
+    color: var(--rojo-oscuro) !important;
+
+
+}
+
+
+
+
+
+
+/* Tipo de universidad */
+
+.tipo-uni {
+
+    display: inline-block;
+
+    padding: 0.3rem 0.8rem;
+
+    border-radius: 6px;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    color: white;
+
+    margin-bottom: 0.7rem;
+
+}
+
+
+.publica {
+
+    background-color: var(--verde-publica);
+
+}
+
+
+.privada {
+
+    background-color: var(--rojo-etiqueta);
+
+}
+
+
+/* Nombre */
+
+.nombre-uni {
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    color: var(--rojo-oscuro);
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+/* Ubicación */
+
+.ubicacion {
+
+    font-size: 0.95rem;
+
+    color: #555;
+
+    margin-bottom: 0.8rem;
+
+}
+
+
+/* Carreras */
+
+.carreras {
+
+    color: var(--texto-medio);
+
+    line-height: 1.8;
+
+}
+
+
+/*CLASE YUPI */
+
+.yupi {
+
+ width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+
+  padding: 35px 45px;
+
+   background: rgba(250, 248, 240, 0.97);
+
+  border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+
+    color: var(--texto-medio);
+}
+
+.yupi h2 {
+
+    color: #a53049;
+
+    font-size: 28px;
+
+    border-bottom: 2px solid #c7b27b;
+
+    padding-bottom: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.yupi h3 {
+    color: #ad0521;
+    font-size: 21px;
+    background: #eee9d9;
+    padding: 12px 15px;
+    border-left: 5px solid #8b303d;
+    border-radius: 6px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.yupi h4 {
+    background: #f5f3f3;
+    color: #a03030;
+    padding: 15px 30px;
+    border: 4px solid #111;
+    border-radius: 100px;
+    box-shadow: 0 6px 0 #111;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 30px auto 20px;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTENEDOR RESPONSIVO */
+.malla-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* TABLA PRINCIPAL */
+.malla-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+/* ENCABEZADOS (HEADERS) */
+.malla-table th {
+  background-color: #a50505; /* Azul institucional */
+  color: #ffffff;
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* CELDAS GENERALES */
+.malla-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+}
+
+/* NOMBRE LATERAL DE LOS SEMESTRES */
+.semestre-title {
+  background-color: #f9fafb;
+  font-weight: 700;
+  color: #750f0f;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 2px solid #e5e7eb;
+  width: 140px;
+}
+
+/* Cambio estético lateral al iniciar la mención */
+.semestre-title.esp {
+  background-color: #f5f3ff;
+  color: #6d28d9; /* Púrpura de especialidad */
+  border-right: 2px solid #ddd6fe;
+}
+
+/* FORMATO PARA LOS CÓDIGOS DE MATERIA */
+.cod {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  color: #4b5563;
+  width: 110px;
+}
+
+/* SEPARADORES ENTRE SEMESTRES */
+.linea-division {
+  border-top: 2px solid #d1d5db;
+}
+
+/* LÍNEA DE QUIEBRE DONDE ENTRA LA MENCIÓN (QUINTO SEMESTRE) */
+.linea-cambio {
+  border-top: 3px dashed #6d28d9;
+}
+
+/* ETIQUETAS VISUALES (TAGS) */
+.tag {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.tag.comun {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.tag.mencio {
+  background-color: #f3e8ff;
+  color: #6d28d9;
+}
+
+/* EFECTO HOVER */
+.malla-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+
+
+   /*ESTILOS GENERALES Para computadoras/pantallas grandes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Ejemplo de contenedor flexible moderno */
+.contenedor {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Ejemplo de imágenes que no se desbordan */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* PARA CELULARES (Pantallas menores a 768px)*/
+@media screen and (max-width: 768px) {
+    
+    body {
+        font-size: 14px; /* Texto ligeramente más pequeño para móviles */
+    }
+
+    /* Cambia el diseño de columnas a una sola columna vertical */
+    .contenedor {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Ajusta los menús de navegación si tienes uno de tipo horizontal */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Asegura que los bloques principales ocupen todo el ancho disponible */
+    .columna-principal, .columna-lateral, .tarjeta {
+        width: 100% !important;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.yupi p {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #333;
+}
+.yupi ul {
+
+    padding-left: 35px;
+
+    margin-bottom: 20px;
+}
+.yupi li {
+
+    margin: 7px 0;
+
+    font-size: 16px;
+}
+.yupi a {
+
+    color: #1312128a;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.yupi a:hover {
+
+    color: red;
+
+    text-decoration: underline;
+
+}
+
+/*BOTÓN VOLVER*/
+.boton-volver {
+
+    background-color: var(--rojo-principal);
+    color: var(--blanco);
+    border: none;
+
+    padding: 0.8rem 1.4rem;
+
+    border-radius: 8px;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    margin-bottom: 2rem;
+
+}
+
+
+.boton-volver:hover {
+
+    background-color: var(--rojo-oscuro);
+
+}
+
+
+
+
+
+
+
+/*uni umsa*/ 
+
+
+.cuadro-ubicacion {
+    width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background: rgb(251, 252, 240);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.cuadro-ubicacion h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.cuadro-ubicacion p {
+    color: #555;
+    font-size: 16px;
+}
+
+.mapa {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.boton-mapa {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.boton-mapa:hover {
+    background: #555;
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .cuadro-ubicacion {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .mapa iframe {
+        height: 250px;
+    }
+
+    .cuadro-ubicacion h2 {
+        font-size: 21px;
+    }
+
+    .cuadro-ubicacion p {
+        font-size: 14px;
+    }
+
+    .boton-mapa {
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  PIE DE PÁGINA */
+
+.pie-pagina {
+
+    text-align: center;
+
+    color: var(--blanco);
+
+    padding: 1.2rem;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    margin-top: 1rem;
+
+}
+.pie-pagina p {
+
+    margin: 0;
+}
+
+/* ADAPTACIÓN PARA CELULAR*/
+@media (max-width: 700px) {
+
+    .texto-cabecera h1 {
+
+        font-size: 1.5rem;
+    }
+
+    .texto-cabecera p {
+        font-size: 0.9rem;
+    }
+    .menu-navegacion ul {
+
+        flex-direction: column;
+
+        gap: 0.7rem;
+    }
+    .imagen-inicio img {
+
+        width: 100%;
+    }
+    .contenido-principal {
+
+        padding: 1.2rem;
+
+    }
+
+    .yupi {
+
+        width: 95%;
+
+        padding: 20px;
+
+    }
+/*TEST VOCACIONAL 1 */
+
+.contenedor-test {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+/* Introducción */
+
+.introduccion {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.introduccion h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.introduccion p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+
+/* Preguntas */
+
+.pregunta {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.pregunta h3 {
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+
+/* Opciones */
+
+.pregunta label {
+    display: block;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pregunta label:hover {
+    background: #f5f5f5;
+}
+
+.pregunta input {
+    margin-right: 10px;
+}
+
+
+/* Botón */
+
+.boton-resultado {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #f0530a;
+    color: white;
+}
+
+.boton-resultado:hover {
+    opacity: 0.85;
+}
+
+
+/* Resultado */
+
+.resultado {
+    display: none;
+    background: white;
+    padding: 35px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.resultado h2 {
+    margin-bottom: 20px;
+}
+
+.resultado h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.resultado p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.nota {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    font-size: 14px;
+}
+
+
+/* Adaptación para celular */
+
+@media (max-width: 700px) {
+
+    .contenedor-test {
+        width: 94%;
+    }
+
+    .introduccion,
+    .pregunta,
+    .resultado {
+        padding: 20px;
+    }
+
+    .pregunta h3 {
+        font-size: 17px;
+    }
+
+    .boton-resultado {
+        width: 100%;
+    }
+}
+
+/*divmaterias*/
+
+.cuadro-agronomia {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    border-top: 6px solid #176b3a;
+}
+
+.cuadro-agronomia h2 {
+    text-align: center;
+    color: #176b3a;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cuadro-agronomia h3 {
+    color: #176b3a;
+    margin-top: 25px;
+    border-bottom: 2px solid #176b3a;
+    padding-bottom: 8px;
+}
+
+.cuadro-agronomia p {
+    color: #f0ecec;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.materias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.materias span {
+    background: #176b3a;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.botones a {
+    text-decoration: none;
+    color: white;
+    background: #176b3a;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.botones a:first-child {
+    background: #555;
+}
+
+.botones a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+
+    .cuadro-agronomia {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .cuadro-agronomia h2 {
+        font-size: 23px;
+    }
+
+    .cuadro-agronomia p {
+        font-size: 14px;
+    }
+
+    .botones a {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*facul*/
+.facultad-agronomia {
+   width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background: rgb(251, 252, 240);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.encabezado-facultad {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.encabezado-facultad h2 {
+    font-size: 30px;
+    color: #176b3a;
+    margin-bottom: 15px;
+}
+
+.encabezado-facultad p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.contenido-agronomia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.informacion,
+.materias {
+    padding: 25px;
+    background: #f5f8f5;
+    border-radius: 18px;
+}
+
+.informacion h3,
+.materias h3 {
+    color: #176b3a;
+    margin-bottom: 20px;
+}
+
+.carrera {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border-left: 5px solid #176b3a;
+}
+
+.carrera h4 {
+    margin: 0 0 6px 0;
+    color: #333;
+}
+
+.carrera p {
+    margin: 0;
+    color: #666;
+}
+
+.materias-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.materias-lista span {
+    padding: 10px 15px;
+    background: #176b3a;
+    color: white;
+    border-radius: 20px;
+}
+
+.materias p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.botones-facultad {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    padding: 13px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.ubicacion {
+    background: #555;
+}
+
+.pagina {
+    background: #176b3a;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+
+    .facultad-agronomia {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .encabezado-facultad h2 {
+        font-size: 24px;
+    }
+
+    .contenido-agronomia {
+        grid-template-columns: 1fr;
+    }
+
+    .boton {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+
+
+
+/*.malla*/
+
+
+
+.malla {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.malla h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.malla > p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.nivel {
+    margin-bottom: 40px;
+}
+
+.nivel h3 {
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.materias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.materia {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border: 1px solid #e5e5e5;
+}
+
+.materia span {
+    display: inline-block;
+    background: #eeeeee;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.materia h4 {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.materia b {
+    font-size: 14px;
+    color: #555;
+}
+
+.materia:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+    box-shadow: 0 7px 18px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 700px) {
+
+    .malla {
+        width: 94%;
+    }
+
+    .malla h2 {
+        font-size: 28px;
+    }
+
+    .materias {
+        grid-template-columns: 1fr;
+    }
+
+    .materia {
+        padding: 17px;
+    }
+
+    .nivel h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================= */
+/* YUPI - TEST DE ORIENTACIÓN VOCACIONAL CHASIDE  */
+/* HOJA DE ESTILOS PRINCIPAL                     */
+/* ============================================= */
+
+
+/* ============================================= */
+/* 1. COLORES PRINCIPALES DE YUPI                */
+/* ============================================= */
+
+:root {
+    --rojo: #700909;
+    --vino: #651d2a;
+    --naranja: #f0530a;
+    --crema: #faf8f0;
+    --blanco: #ffffff;
+    --texto: #32252a;
+    --gris: #756b70;
+    --borde: #eadfdb;
+}
+
+
+/* ============================================= */
+/* 2. CONFIGURACIÓN GENERAL                      */
+/* ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        145deg,
+        #700909,
+        #4c0916
+    );
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+    outline: 3px solid #f8a26b;
+    outline-offset: 3px;
+}
+
+
+/* ============================================= */
+/* 3. ENCABEZADO PRINCIPAL                       */
+/* ============================================= */
+
+.hero {
+    position: relative;
+    background: linear-gradient(
+        120deg,
+        #4e0916,
+        #700909,
+        #81232a
+    );
+    color: white;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "✧";
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+    font-size: 220px;
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+.hero-inner {
+    max-width: 1120px;
+    margin: auto;
+    padding: 25px 25px 105px;
+}
+
+
+/* ============================================= */
+/* 4. LOGOTIPO Y NOMBRE DE YUPI                  */
+/* ============================================= */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    padding-left: 12px;
+    border-left: 1px solid #ffffff66;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/* ============================================= */
+/* 5. PRESENTACIÓN DEL TEST                      */
+/* ============================================= */
+
+.hero-content {
+    max-width: 760px;
+    margin-top: 58px;
+}
+
+.hero-tag {
+    color: #ffb48b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 16px 0;
+    font-size: clamp(37px, 6vw, 66px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.hero h1 em {
+    color: #ff9e6a;
+    font-style: normal;
+}
+
+.hero-content > p {
+    max-width: 620px;
+    color: #f5dedd;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.hero-meta span {
+    padding: 8px 14px;
+    background: #ffffff14;
+    border: 1px solid #ffffff35;
+    border-radius: 25px;
+    color: #f9e3dd;
+    font-size: 13px;
+}
+
+
+/* ============================================= */
+/* 6. CONTENEDOR PRINCIPAL                       */
+/* ============================================= */
+
+.shell {
+    position: relative;
+    z-index: 1;
+    max-width: 1080px;
+    margin: -58px auto 55px;
+    padding: 0 20px;
+}
+
+
+/* ============================================= */
+/* 7. CONTENEDOR YUPI                            */
+/* ============================================= */
+
+.yupi {
+    width: 100%;
+    background: rgba(250, 248, 240, 0.97);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 24px 70px #21040b50;
+}
+
+
+/* ============================================= */
+/* 8. PANELES DEL TEST                           */
+/* ============================================= */
+
+.panel {
+    width: 100%;
+    padding: 35px;
+    background: white;
+    border: 1px solid #f1e9e4;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px #651d2a08;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ============================================= */
+/* 9. TÍTULOS Y TEXTOS                           */
+/* ============================================= */
+
+h2 {
+    margin: 12px 0 17px;
+    color: var(--vino);
+    font-size: clamp(25px, 3.5vw, 37px);
+    line-height: 1.2;
+}
+
+.eyebrow {
+    color: var(--naranja);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.muted {
+    margin-bottom: 16px;
+    color: var(--gris);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ============================================= */
+/* 10. TARJETAS DE BIENVENIDA                    */
+/* ============================================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 28px 0;
+}
+
+.feature {
+    padding: 22px;
+    background: #fffcfa;
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    border-color: var(--naranja);
+    box-shadow: 0 10px 25px #651d2a15;
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 14px;
+    background: #fff0e8;
+    border-radius: 13px;
+    color: var(--naranja);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.feature strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--vino);
+    font-size: 17px;
+}
+
+.feature p {
+    color: var(--gris);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ============================================= */
+/* 11. CUADROS DE INFORMACIÓN                    */
+/* ============================================= */
+
+.notice {
+    margin: 25px 0;
+    padding: 18px;
+    background: #fff5ee;
+    border-left: 4px solid var(--naranja);
+    border-radius: 9px;
+    color: #65473c;
+    line-height: 1.7;
+}
+
+.notice strong {
+    color: var(--vino);
+}
+
+.notice p {
+    margin: 10px 0;
+}
+
+
+/* ============================================= */
+/* 12. BOTONES GENERALES                         */
+/* ============================================= */
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    background: linear-gradient(
+        115deg,
+        var(--naranja),
+        #d53c16
+    );
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 7px 15px #d53c1625;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px #d53c1638;
+}
+
+.btn.secondary {
+    background: white;
+    color: var(--vino);
+    border: 1px solid #d8c7c6;
+    box-shadow: none;
+}
+
+.btn.secondary:hover {
+    background: #fff5ee;
+    border-color: var(--naranja);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ============================================= */
+/* 13. ENCABEZADO DE LAS PREGUNTAS               */
+/* ============================================= */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.section-heading h2 {
+    margin-bottom: 5px;
+}
+
+.count-badge {
+    display: inline-block;
+    padding: 9px 14px;
+    background: #fff0e8;
+    border-radius: 30px;
+    color: #9d3518;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ============================================= */
+/* 14. BARRA DE PROGRESO                         */
+/* ============================================= */
+
+.progress {
+    width: 100%;
+    height: 12px;
+    margin: 20px 0 28px;
+    background: #f0e5e2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #a92225,
+        var(--naranja)
+    );
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+
+/* ============================================= */
+/* 15. TARJETAS DE PREGUNTAS                     */
+/* ============================================= */
+
+.question {
+    margin: 15px 0;
+    padding: 20px;
+    background: #fffdfb;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.question:hover {
+    border-color: #e5b4a3;
+    box-shadow: 0 5px 15px #651d2a0b;
+}
+
+.qtop {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 38px;
+    height: 38px;
+    background: var(--vino);
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.qtext {
+    margin: 5px 0 17px;
+    color: var(--texto);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+
+/* ============================================= */
+/* 16. OPCIONES DE RESPUESTA                     */
+/* ============================================= */
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: 51px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 105px;
+    padding: 11px 24px;
+    background: white;
+    border: 1px solid #e5d7d3;
+    border-radius: 10px;
+    color: var(--texto);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.choice:hover {
+    border-color: var(--naranja);
+    background: #fffaf7;
+}
+
+.choice input {
+    accent-color: var(--naranja);
+    width: 17px;
+    height: 17px;
+}
+
+.choice:has(input:checked) {
+    background: #fff0e8;
+    border-color: var(--naranja);
+    color: #982d15;
+    font-weight: bold;
+}
+
+
+/* ============================================= */
+/* 17. MENSAJES DE VALIDACIÓN                    */
+/* ============================================= */
+
+.warning {
+    margin-top: 15px;
+    color: #a21d20;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+
+/* ============================================= */
+/* 18. RESULTADOS VOCACIONALES                   */
+/* ============================================= */
+
+.result-head {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin: 20px 0 30px;
+}
+
+.areas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin: 20px 0 30px;
+}
+
+.subheading {
+    margin-top: 35px;
+    margin-bottom: 18px;
+    color: var(--vino);
+    font-size: 25px;
+}
+
+
+/* ============================================= */
+/* 19. TARJETAS DE ÁREAS VOCACIONALES            */
+/* ============================================= */
+
+.area {
+    padding: 22px;
+    background: #fffdfb;
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.area:hover {
+    border-color: #e8b8a4;
+    box-shadow: 0 8px 20px #651d2a12;
+}
+
+.area h3 {
+    margin: 10px 0;
+    color: var(--vino);
+    font-size: 22px;
+}
+
+.area strong {
+    color: var(--vino);
+    font-size: 17px;
+}
+
+.area small {
+    color: var(--naranja);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.area p {
+    margin: 12px 0;
+    color: var(--gris);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ============================================= */
+/* 20. ÁREAS DESTACADAS                          */
+/* ============================================= */
+
+.winner {
+    background: linear-gradient(
+        135deg,
+        #fff7f0,
+        #ffffff
+    );
+    border: 2px solid #efba9c;
+}
+
+.winner h3 {
+    color: var(--rojo);
+}
+
+.winner strong {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: #fff0e8;
+    border-radius: 20px;
+    color: #a43217;
+}
+
+
+/* ============================================= */
+/* 21. CONTENEDOR DEL GRÁFICO                    */
+/* ============================================= */
+
+.chart-box {
+    padding: 20px;
+    background: #fffaf7;
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+}
+
+
+/* ============================================= */
+/* 22. BARRAS DE RESULTADOS                      */
+/* ============================================= */
+
+.barrow {
+    display: grid;
+    grid-template-columns: 30px 1fr 50px;
+    align-items: center;
+    gap: 13px;
+    margin: 18px 0;
+}
+
+.barrow b {
+    color: var(--vino);
+    font-size: 17px;
+}
+
+.barrow span {
+    color: var(--gris);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.bartrack {
+    width: 100%;
+    height: 15px;
+    background: #ebdedb;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.barfill {
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #8d1720,
+        var(--naranja)
+    );
+    border-radius: 30px;
+    transition: width 0.5s ease;
+}
+
+
+/* ============================================= */
+/* 23. PIE DE PÁGINA                             */
+/* ============================================= */
+
+.footer {
+    padding: 0 20px 34px;
+    color: #f6e4df;
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer strong {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer span {
+    display: block;
+    margin-top: 6px;
+    opacity: 0.8;
+}
+
+
+/* ============================================= */
+/* 24. DISEÑO PARA TABLETAS                      */
+/* ============================================= */
+
+@media screen and (max-width: 900px) {
+
+    .hero-inner {
+        padding: 25px 25px 95px;
+    }
+
+    .yupi {
+        padding: 20px;
+    }
+
+    .panel {
+        padding: 25px;
+    }
+
+    .features {
+        gap: 12px;
+    }
+
+    .feature {
+        padding: 17px;
+    }
+
+}
+
+
+/* ============================================= */
+/* 25. DISEÑO PARA CELULARES                     */
+/* ============================================= */
+
+@media screen and (max-width: 680px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .hero-inner {
+        padding: 22px 20px 92px;
+    }
+
+    .hero-content {
+        margin-top: 42px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+    .hero-meta {
+        gap: 8px;
+    }
+
+    .hero-meta span {
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    .brand {
+        font-size: 23px;
+    }
+
+    .brand span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .shell {
+        margin-top: -48px;
+        padding: 0 12px;
+    }
+
+    .yupi {
+        padding: 12px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .result-head {
+        grid-template-columns: 1fr;
+    }
+
+    .areas {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        margin-bottom: 5px;
+    }
+
+    .question {
+        padding: 15px;
+    }
+
+    .choices {
+        margin-left: 0;
+    }
+
+    .choice {
+        flex: 1;
+        min-width: 0;
+        padding: 12px;
+    }
+
+    .actions .btn {
+        flex: 1;
+        padding: 13px 15px;
+    }
+
+    .chart-box {
+        padding: 14px;
+    }
+
+    .barrow {
+        grid-template-columns: 25px 1fr 45px;
+        gap: 9px;
+    }
+
+    .subheading {
+        font-size: 23px;
+    }
+
+}
+
+
+/* ============================================= */
+/* 26. ESTILOS PARA IMPRIMIR RESULTADOS          */
+/* ============================================= */
+
+@media print {
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    .shell {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .yupi {
+        padding: 0;
+        background: white;
+        box-shadow: none;
+    }
+
+    .panel {
+        padding: 10px;
+        border: none;
+        box-shadow: none;
+    }
+
+    #welcome,
+    #test,
+    .no-print,
+    .footer {
+        display: none !important;
+    }
+
+    #results {
+        display: block !important;
+    }
+
+    .area {
+        break-inside: avoid;
+    }
+
+    .barfill {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
