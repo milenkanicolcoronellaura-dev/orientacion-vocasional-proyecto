@@ -1,5 +1,5 @@
 /* =========================================
-   TEST 2 - HABILIDADES Y APTITUDES
+   TEST  - HABILIDADES Y APTITUDES
    80 PREGUNTAS - DEPARTAMENTO DE LA PAZ
 ========================================= */
 

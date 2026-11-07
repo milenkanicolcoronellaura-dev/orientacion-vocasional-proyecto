@@ -150,14 +150,6 @@ display: flex;
 
 
 
-
-
-
-
-
-
-
-
 /* MENÚ DE NAVEGACIÓN */
 
 .menu-navegacion {
@@ -231,6 +223,80 @@ display: flex;
 
 
 
+
+
+
+
+
+
+/*ubicacion del departamento*/
+
+
+.ubicacion-departamento {
+    width: 95%;
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 35px;
+    background: var(--crema);
+    border-left: 7px solid var(--rojo);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    box-sizing: border-box;
+}
+
+.ubicacion-departamento h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.descripcion-departamento {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.ubicacion-info {
+    padding: 22px;
+    margin-bottom: 25px;
+    background: white;
+    border-radius: 10px;
+}
+
+.ubicacion-info h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.ubicacion-info p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.mapa-departamento iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+    .ubicacion-departamento {
+        width: 96%;
+        padding: 20px;
+    }
+
+    .ubicacion-departamento h2 {
+        font-size: 24px;
+    }
+
+    .descripcion-departamento,
+    .ubicacion-info p {
+        font-size: 16px;
+    }
+
+    .mapa-departamento iframe {
+        height: 320px;
+    }
+}
 
 
 
@@ -748,85 +814,6 @@ img {
         margin-bottom: 15px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
